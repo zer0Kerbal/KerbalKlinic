@@ -15,54 +15,48 @@ namespace KerbalKlinic
 
     [KSPAddon(KSPAddon.Startup.SpaceCentre, false)]
     public class KerbalKlinic : MonoBehaviour
-    {   bool StockPrice;
+    {   
+        
+        // GUI
         Rect MenuWindow;
         public Vector2 scrollPosition;
-        ProtoCrewMember SelectedKerb;
-        KSP.UI.Screens.ApplicationLauncherButton appLauncherButton;
-        public string KlinicPriceString;
-        public double KlinicPrice;
         public Rect KlinicWindow = new Rect(200, 200, 100, 100);
+        KSP.UI.Screens.ApplicationLauncherButton appLauncherButton;
         bool ButtonPress = false;
-        string RelPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         public int ToolbarINT = 0;
+        
+        ProtoCrewMember SelectedKerb;
+        
+        public string KlinicPriceString;
+        
+        public double KlinicPrice;
+        
+        bool StockPrice;
+        
+        // IO
+        string RelPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         ConfigNode Konf = ConfigNode.Load(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)+"/files/config.cfg");
         
-
-        
-        
-        
-        
-
-
-
-
-
-
-
-
-       
-
 
         public void Awake()
         {
             //Get values from cfg
             MenuWindow = new Rect(Screen.width / 2 + int.Parse(Konf.GetValue("WindowPosX")), Screen.height / 2 + int.Parse(Konf.GetValue("WindowPosY")), 400, 400);
             KlinicPriceString = Konf.GetValue("Cost");
-            StockPrice = bool.Parse(Konf.GetValue("Stock price"));
+            StockPrice = bool.Parse(Konf.GetValue("StockPrice"));
             //create appbutton
             if (appLauncherButton == null)
             {
                 Texture2D texture = new Texture2D(36, 36, TextureFormat.RGBA32, false);
-                texture.LoadImage(File.ReadAllBytes(RelPath + "/files/button.png"));
+                //object value = texture.LoadRawTextureData(File.ReadAllBytes(RelPath + "/files/button.png"));
+
+                object value = texture.LoadImage(File.ReadAllBytes(RelPath + "/files/button.png"));
                 appLauncherButton =  KSP.UI.Screens.ApplicationLauncher.Instance.AddModApplication(
                   () => { ButtonPress = true; },
                   () => { ButtonPress = false;},
                   null, null, null, null,
                   KSP.UI.Screens.ApplicationLauncher.AppScenes.SPACECENTER,
                    texture);
-               
-                
              }
         }
         
@@ -73,14 +67,11 @@ namespace KerbalKlinic
             {
                 GUI.skin = HighLogic.Skin;
                 MenuWindow = GUI.Window(0, MenuWindow, MenuGUI, "Kerbal Klinic 1.1");
-                
             }
-           
         }
         
         void MenuGUI(int windowID)
         {
-           
             //LISTENERSTELLUNG / get dead and alive kerbals
             IEnumerable<ProtoCrewMember> KerbalKIA = HighLogic.CurrentGame.CrewRoster.Kerbals(ProtoCrewMember.KerbalType.Crew, ProtoCrewMember.RosterStatus.Dead);
             IEnumerable<ProtoCrewMember> KerbalAlive = HighLogic.CurrentGame.CrewRoster.Kerbals(ProtoCrewMember.KerbalType.Crew, ProtoCrewMember.RosterStatus.Assigned);
@@ -159,7 +150,6 @@ namespace KerbalKlinic
                     Konf.Save(RelPath+"/files/config.cfg");
                 }
                 StockPrice = GUI.Toggle(new Rect(20, 220, 360, 40), StockPrice, "Use stock price");
-                
             }
             GUI.DragWindow(new Rect(0, 0, 400, 400));
 
@@ -167,11 +157,26 @@ namespace KerbalKlinic
         void OnDisable()
         {
             KSP.UI.Screens.ApplicationLauncher.Instance.RemoveModApplication(appLauncherButton);
-            Konf.SetValue("WindowPosX", MenuWindow.x - Screen.width/2);
-            Konf.SetValue("WindowPosY", MenuWindow.y - Screen.height/2);
-            Konf.SetValue("Stock price", StockPrice);
+
+            Konf.SetValue("WindowPosX", string.Format("f", MenuWindow.x - (Screen.width / 2)));
+            Konf.SetValue("WindowPosY", string.Format("f", MenuWindow.y - (Screen.height / 2)));
+
+            Konf.SetValue("StockPrice", StockPrice.ToString());
+
+            //Konf.SetValue("WindowPosX", MenuWindow.x - (Screen.width / 2))
+            //Konf.SetValue("WindowPosY", MenuWindow.y - Screen.height/2);
+            //Konf.SetValue("Stock price", StockPrice);
+
             Konf.Save(RelPath + "/files/config.cfg");
         }
+
+        //void OnHide()
+        //{
+        //}
+        
+        //void OnShow()
+        //{ 
+        //}
 
         void CalculateHireCost()
         {
