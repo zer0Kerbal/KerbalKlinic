@@ -13,6 +13,10 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <LangVersion>latest</LangVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+      <FileAlignment>512</FileAlignment>
+      <Deterministic>true</Deterministic>
+      <LangVersion>latest</LangVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,6 +35,10 @@
     <DebugType>embedded</DebugType>
     <OutputPath>..\..\GameData\NepalRAWR\KerbalKlinic\Plugins\</OutputPath>
     <Optimize>true</Optimize>
+    <OutputPath>..\GameData\NepalRAWR\KerbalKlinic\Plugins\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>embedded</DebugType>
     <!-- <DebugSymbols>true</DebugSymbols> -->
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -78,6 +86,23 @@
       <Private>False</Private>
     </Reference> -->
     <Reference Include="K:\11\KSP_x64_Data\Managed\KSPUtil.dll">
+    <Optimize>true</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+    <OutputPath>..\GameData\NepalRAWR\KerbalKlinic\Plugins\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="(K112)\KSP_x64_Data\Managed\Assembly-CSharp.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="(K112)\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="(K112)\KSP_x64_Data\Managed\UnityEngine.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="(K112)\KSP_x64_Data\Managed\UnityEngine.UI">
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -111,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Version.tt">
+      <Content Include="Properties\Version.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Version.cs</LastGenOutput>
     </Content>
@@ -130,6 +156,10 @@ set K11=K:\11
 IF "%25K11%25"=="" (
 	ECHO Configuration error - K11 not specified in project.
 	ECHO Either set K11 environment variable
+set K112=$(K112)
+IF "%25K112%25"=="" (
+	ECHO Configuration error - K112 not specified in project.
+	ECHO Either set K112 environment variable
 	PAUSE
 	GOTO DONE
 )
@@ -152,4 +182,5 @@ del $(TargetDir)\*.tmp
     </MonoDevelop>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
+</Project>
 </Project>
