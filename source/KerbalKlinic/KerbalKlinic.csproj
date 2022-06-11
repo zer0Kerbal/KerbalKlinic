@@ -22,7 +22,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>..\..\GameData\NepalRAWR\KerbalKlinic\Plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -30,12 +30,18 @@
     <ConsolePause>false</ConsolePause>
     <Prefer32Bit>false</Prefer32Bit>
     <PlatformTarget>anycpu</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>embedded</DebugType>
-    <OutputPath>..\..\GameData\NepalRAWR\KerbalKlinic\Plugins\</OutputPath>
     <Optimize>true</Optimize>
-    <OutputPath>..\GameData\NepalRAWR\KerbalKlinic\Plugins\</OutputPath>
+    <OutputPath>..\..\GameData\NepalRAWR\KerbalKlinic\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>embedded</DebugType>
@@ -49,67 +55,29 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- <Reference Include="$(K112)\KSP_x64_Data\Managed\KSP*.dll">
+    </Reference> -->
+    <Reference Include="K:\14\KSP_x64_Data\Managed\Assembly-CSharp.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K:\14\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K:\14\KSP_x64_Data\Managed\UnityEngine.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K:\14\KSP_x64_Data\Managed\UnityEngine.UI.dll">
+      <Private>False</Private>
+    </Reference>
+    <!-- <Reference Include="K:\14\KSP_x64_Data\Managed\KSPUtil.dll">
+      <Private>False</Private>
+    </Reference>Include="K:\14\KSP_x64_Data\Managed\KSPUtil.dll">
       <Private>False</Private>
     </Reference> -->
-    <Reference Include="K:\11\KSP_x64_Data\Managed\Assembly-CSharp.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="K:\11\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="K:\11\KSP_x64_Data\Managed\UnityEngine.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="K:\11\KSP_x64_Data\Managed\UnityEngine.UI.dll">
-      <Private>False</Private>
-    </Reference>
-    <!-- <Reference Include="K:\11\KSP_x64_Data\Managed\UnityEngine.IMGUIModule.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="K:\11\KSP_x64_Data\Managed\UnityEngine.AnimationModule.dll">
-    <Reference Include="K:\11\KSP_x64_Data\Managed\UnityEngine.TextRenderingModule.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="K:\11\KSP_x64_Data\Managed\UnityEngine.HotReloadModule.dll">
-      <Private>False</Private> -->
-    <!-- </Reference> -->
-    <!-- <Reference Include="K:\11\KSP_x64_Data\Managed\Assembly-CSharp.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="K:\11\KSP_x64_Data\Managed\*.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="K:\11\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="K:\11\KSP_x64_Data\Managed\UnityEngine.dll">
-      <Private>False</Private>
-    </Reference> -->
-    <Reference Include="K:\11\KSP_x64_Data\Managed\KSPUtil.dll">
-    <Optimize>true</Optimize>
-    <Prefer32Bit>false</Prefer32Bit>
-    <PlatformTarget>anycpu</PlatformTarget>
-    <ConsolePause>false</ConsolePause>
-    <OutputPath>..\GameData\NepalRAWR\KerbalKlinic\Plugins\</OutputPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="(K112)\KSP_x64_Data\Managed\Assembly-CSharp.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="(K112)\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="(K112)\KSP_x64_Data\Managed\UnityEngine.dll">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="(K112)\KSP_x64_Data\Managed\UnityEngine.UI">
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Linq" />
+    <!-- <Reference Include="System.Linq" /> -->
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -136,7 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Version.tt">
-      <Content Include="Properties\Version.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Version.cs</LastGenOutput>
     </Content>
@@ -152,11 +119,11 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>
-set K11=K:\11
-IF "%25K11%25"=="" (
+<!-- set K14=K:\14
+IF "%25K14%25"=="" (
 	ECHO Configuration error - K11 not specified in project.
 	ECHO Either set K11 environment variable
-set K112=$(K112)
+set K112=$(K112) -->
 IF "%25K112%25"=="" (
 	ECHO Configuration error - K112 not specified in project.
 	ECHO Either set K112 environment variable
@@ -164,9 +131,9 @@ IF "%25K112%25"=="" (
 	GOTO DONE
 )
 
-start /D $(ProjectDir)..\ /WAIT _deploy.bat  $(TargetDir) $(TargetFileName) $(TargetName)
+start /D $(ProjectDir)..\..\ /WAIT _deploy.bat  $(TargetDir) $(TargetFileName) $(TargetName)
 if $(ConfigurationName) == Release (	
-  start /D $(ProjectDir)..\ /WAIT _buildRelease.bat $(TargetDir) $(TargetFileName) $(TargetName)
+  start /D $(ProjectDir)..\..\ /WAIT _buildRelease.bat $(TargetDir) $(TargetFileName) $(TargetName)
 
 del $(TargetDir)\*.tmp
 )
@@ -182,5 +149,4 @@ del $(TargetDir)\*.tmp
     </MonoDevelop>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
-</Project>
 </Project>
