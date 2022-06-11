@@ -150,7 +150,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 
 <!--- mod provenance -->
 [MOD:0:source]: https://github.com/NepalRAWR/KerbalKlinic "GitHub"
-[MOD:0:thread]: https://forum.kerbalspaceprogram.com/index.php?/topic/64520-*/ "KSP Forum"
+[MOD:0:thread]: https://forum.kerbalspaceprogram.com/index.php?/topic/169316-*/ "KSP Forum"
 [MOD:0:dnload]: https://spacedock.info/mod/1636 "SpaceDock"
 
 <!--- license provenance -->
@@ -227,8 +227,6 @@ https://img.shields.io/badge/License-GPLv3-A42E2B?style=plastic&labelColor=white
 [youtube]: https://www.youtube.com/channel/UCp9c8IaK4Gjgfj3O9QxrbDw
 
 [nepalrawr]: https://forum.kerbalspaceprogram.com/index.php?/profile/102159-*/ "NepalRAWR"
-[blackheart]: https://forum.kerbalspaceprogram.com/index.php?/profile/42741-*/ "Blackheart612"
-[daemoria]: https://forum.kerbalspaceprogram.com/index.php?/profile/103696-*/ "Daemoria"  
 [zer0Kerbal]: https://forum.kerbalspaceprogram.com/index.php?/profile/190933-*/ "zer0Kerbal"
 
 [IMG:flg:0]: https://via.placeholder.com/256x160png/ffffff/bada55?text=KGEx "Mini Sample Return Capsule Flag"
