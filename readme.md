@@ -160,8 +160,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 <!--- license provenance -->
 [LIC:0:url]: https://www.gnu.org/licenses/gpl-3.0-standalone.html "GPLv3"  
 [LIC:0:log]: https://i.postimg.cc/9FrwMgK6/GPL-17x17.png "GPLv3"
-[LIC:0:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/KerbalKlinic/master/json/license.json
-https://img.shields.io/badge/License-GPLv3-A42E2B?style=plastic&labelColor=white&logoColor=A42E2B&logo=gnu "GPLv3"
+[LIC:0:shd]: https://img.shields.io/badge/License-GPLv3-A42E2B?style=plastic&labelColor=white&logoColor=A42E2B&logo=gnu "GPLv3"
 
 [LIC:url]: https://www.gnu.org/licenses/gpl-3.0-standalone.html "GPLv3"  
 [LIC:log]: https://i.postimg.cc/9FrwMgK6/GPL-17x17.png "GPLv3"
@@ -232,8 +231,6 @@ https://img.shields.io/badge/License-GPLv3-A42E2B?style=plastic&labelColor=white
 
 [nepalrawr]: https://forum.kerbalspaceprogram.com/index.php?/profile/102159-*/ "NepalRAWR"
 [zer0Kerbal]: https://forum.kerbalspaceprogram.com/index.php?/profile/190933-*/ "zer0Kerbal"
-
-[IMG:flg:0]: https://via.placeholder.com/256x160png/ffffff/bada55?text=KGEx "Mini Sample Return Capsule Flag"
 
 ---
 
