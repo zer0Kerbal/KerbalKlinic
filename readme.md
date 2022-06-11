@@ -13,7 +13,7 @@ updated: 03 Jun 2022 -->
 
 # KerbalKlinic (NRKK)
 
-An addon that intruduces method to resurrect dead kerbals for Kerbal Space Program.
+An addon that introduces a method to resurrect dead kerbals for Kerbal Space Program.
 
 
 
