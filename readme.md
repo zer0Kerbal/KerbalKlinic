@@ -37,6 +37,11 @@ An addon that intruduces method to resurrect dead kerbals for Kerbal Space Progr
   * as much as hiring a new Kerbal
   * but you can also set it to a custom value
 
+<img src="https://raw.githubusercontent.com/zer0Kerbal/KerbalKlinic/master/img/MARKETING-01.png" alt="KerbalKlinic Hero" width="72%" height="72%">
+
+<img src="https://raw.githubusercontent.com/zer0Kerbal/KerbalKlinic/master/img/MARKETING-02.png" alt="KerbalKlinic Hero" width="72%" height="72%">
+
+
 ---
 
 ### See More
