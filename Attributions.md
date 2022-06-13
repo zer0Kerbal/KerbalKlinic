@@ -66,6 +66,7 @@ updated: 03 Jun 2022
     * File type: .jpg
     * 1600x1067 pixels
     * © 2013 - 2022 ClipArt Best - Download thousand of cliparts for free!
+    * modified (colorized) by zer0Kerbal
 
 ### Testing and Support
 
