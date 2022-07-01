@@ -21,6 +21,24 @@
     * reorganizing
     * [Config]
       * rename "Stock price" to "StockPrice"
+    * readonly
+      * readonly string RelPath
+      * readonly ConfigNode Konf
+    * private
+      * private Vector2 scrollPosition;
+      * private Rect KlinicWindow = new Rect(200, 200, 100, 100);
+      * private bool ButtonPress = false;
+      * private int ToolbarINT = 0;
+      * private ProtoCrewMember SelectedKerb;
+      * private bool isVisible
+    * simplify
+      * private Rect KlinicWindow
+        * old: new Rect(200, 200, 100, 100);
+        * new: new (200, 200, 100, 100);
+      * Texture2D texture
+        * old: new Texture2D(36, 36, TextureFormat.RGBA32, false);
+        * new: new Texture2D(36, 36, TextureFormat.RGBA32, false);
+
 
 ### Documentation
 
