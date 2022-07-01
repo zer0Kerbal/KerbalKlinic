@@ -34,34 +34,26 @@ using System.Text.RegularExpressions; // needed for REGEX
 
 namespace KerbalKlinic
 {
-
+    /// <summary>KerbalKlinic (NPKK)</summary>
     [KSPAddon(KSPAddon.Startup.SpaceCentre, false)]
     public class KerbalKlinic : MonoBehaviour
     {   
         
         // GUI
-		private GUIStyle buttonStyle;
-		private bool hasPositioned;
-		private List<string> message;
-        private Rect KlinicWindow = new Rect(200, 200, 100, 100);
-		private string title;
-		private GUIStyle titleStyle;
-		private GUIStyle listStyle;
-		private bool initDone = false;
-
-		bool isVisible = true;
-
         Rect MenuWindow;
+		private bool isVisible = true;
         private Vector2 scrollPosition;
-        // private Rect KlinicWindow = new Rect(200, 200, 100, 100);
+        private Rect KlinicWindow = new(200, 200, 100, 100);
+        private bool ButtonPress = false;
+        private int ToolbarINT = 0;
+        private ProtoCrewMember SelectedKerb;
+        
         KSP.UI.Screens.ApplicationLauncherButton appLauncherButton;
-        bool ButtonPress = false;
-        public int ToolbarINT = 0;
-        
-        ProtoCrewMember SelectedKerb;
-        
+
+        /// <summary>Klinic Price String</summary>
         public string KlinicPriceString;
-        
+
+        /// <summary>Klinic Price</summary>
         public double KlinicPrice;
         
         bool StockPrice;
@@ -70,7 +62,7 @@ namespace KerbalKlinic
         readonly string RelPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         readonly ConfigNode Konf = ConfigNode.Load(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)+"/files/config.cfg");
         
-
+        /// <summary>Awake</summary>
         public void Awake()
         {
             //Get values from cfg
@@ -80,7 +72,7 @@ namespace KerbalKlinic
             //create appbutton
             if (appLauncherButton == null)
             {
-                Texture2D texture = new Texture2D(36, 36, TextureFormat.RGBA32, false);
+                Texture2D texture = new(36, 36, TextureFormat.RGBA32, false);
                 //object value = texture.LoadRawTextureData(File.ReadAllBytes(RelPath + "/files/button.png"));
 
                 object value = texture.LoadImage(File.ReadAllBytes(RelPath + "/files/button.png"));
@@ -92,7 +84,8 @@ namespace KerbalKlinic
                    texture);
              }
         }
-        
+
+        /// <summary>OnGUI</summary>
         public void OnGUI()
         {
             //create GUI
@@ -102,6 +95,8 @@ namespace KerbalKlinic
                 MenuWindow = GUI.Window(0, MenuWindow, MenuGUI, "Kerbal Klinic 1.1");
             }
         }
+
+        /// <summary>MenuGUI</summary>
         void MenuGUI(int windowID)
         {
             //LISTENERSTELLUNG / get dead and alive kerbals
@@ -208,6 +203,7 @@ namespace KerbalKlinic
 
         private void OnFixedUpdate() { }
 
+        /// <summary>OnDestroy</summary>
         protected void OnDestroy() { }
 
         void OnHide() { }
