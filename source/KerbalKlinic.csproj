@@ -53,10 +53,13 @@
     <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.AudioModule.dll">
       <Private>False</Private>
     </Reference>
-    <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.UI.dll">
+    <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.IMGUIModule.dll">
       <Private>False</Private>
     </Reference>
     <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.AnimationModule.dll">
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
