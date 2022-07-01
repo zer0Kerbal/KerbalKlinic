@@ -56,6 +56,9 @@
     <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.IMGUIModule.dll">
       <Private>False</Private>
     </Reference>
+    <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.UI*.dll">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll">
       <Private>False</Private>
     </Reference>
