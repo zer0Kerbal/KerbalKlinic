@@ -15,7 +15,7 @@ updated: 18 Apr 2022 -->
 
 [Home](./index.md)
 
-`<BLURB>`
+An addon that introduces a method to resurrect dead kerbals for Kerbal Space Program.
 
 ## Installation Instructions
 
