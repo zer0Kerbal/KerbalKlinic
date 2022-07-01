@@ -30,7 +30,7 @@ using UnityEngine;
 using System.Collections;
 // using UnityEngine.Rendering;
 // using System.Globalization;
-// using System.Text.RegularExpressions;
+using System.Text.RegularExpressions; // needed for REGEX
 
 namespace KerbalKlinic
 {
@@ -95,19 +95,6 @@ namespace KerbalKlinic
         
         public void OnGUI()
         {
-            try
-			{
-				if (!initDone)
-				{
-					InitialiseStyles();
-				}
-					this.position = GUILayout.Window(this.GetInstanceID(), this.position, this.Window, this.title, HighLogic.Skin.window);
-					this.PositionWindow();
-			}
-			catch (Exception ex)
-			{
-				//Logger.Exception(ex);
-			}
             //create GUI
             if (ButtonPress == true ) 
             {
@@ -215,81 +202,22 @@ namespace KerbalKlinic
             Konf.Save(RelPath + "/files/config.cfg");
         }
 
-		private void Start()
-		{
-            base.Start;
-            try
-			{
-				this.title = "KerbalKlinic (NRKK)";
-			}
-			catch (Exception ex)
-			{
-				//Logger.Exception(ex);
-			}
-        }
+		private void Start() { }
 
-		private void Update()
-		{
-            base.Update;
-        }
+        private void Update() { }
 
-		private void OnFixedUpdate()
-		{
-            base.OnFixedUpdate;
-        }
+        private void OnFixedUpdate() { }
 
-        protected void OnDestroy()
-		{
-			//Logger.Log("FirstRunGui was destroyed.");
-		}
+        protected void OnDestroy() { }
 
-        //void OnHide()
-        //{
-        //}
-        
-        //void OnShow()
-        //{ 
-        //}
+        void OnHide() { }
+
+        void OnShow() { }
 
         void CalculateHireCost()
         {
             double HiredKerbals = HighLogic.CurrentGame.CrewRoster.GetActiveCrewCount() + 1;
             KlinicPrice = (150 * Math.Pow(HiredKerbals, 2) + 12350 * HiredKerbals) / 10;
         }
-
-		private void InitializeStyles()
-		{
-			initDone = true;
-			this.titleStyle = new GUIStyle(HighLogic.Skin.label)
-			{
-				normal =
-					 {
-						  textColor = Color.white
-					 },
-				fontSize = 13,
-				fontStyle = FontStyle.Bold,
-				alignment = TextAnchor.MiddleCenter,
-				stretchWidth = true
-			};
-			listStyle = new GUIStyle(HighLogic.Skin.label)
-			{
-				normal =
-					 {
-						  textColor = Color.white
-					 },
-				fontSize = 13,
-				fontStyle = FontStyle.Bold,
-				alignment = TextAnchor.MiddleLeft,
-				stretchWidth = true
-			};
-
-			this.buttonStyle = new GUIStyle(HighLogic.Skin.button)
-			{
-				normal =
-					 {
-						  textColor = Color.white
-					 }
-			};
-		}
     }
 }
