@@ -32,6 +32,9 @@ using System.Collections;
 // using System.Globalization;
 using System.Text.RegularExpressions; // needed for REGEX
 
+using RUI.Icons.Selectable;
+using KSP.UI.Screens;
+
 namespace KerbalKlinic
 {
     /// <summary>KerbalKlinic (NPKK)</summary>
@@ -45,6 +48,7 @@ namespace KerbalKlinic
         private Vector2 scrollPosition;
         private Rect KlinicWindow = new(200, 200, 100, 100);
         private bool ButtonPress = false;
+        private bool IconsLoaded = false;
         private int ToolbarINT = 0;
         private ProtoCrewMember SelectedKerb;
         
@@ -69,13 +73,22 @@ namespace KerbalKlinic
             MenuWindow = new Rect(Screen.width / 2 + int.Parse(Konf.GetValue("WindowPosX")), Screen.height / 2 + int.Parse(Konf.GetValue("WindowPosY")), 400, 400);
             KlinicPriceString = Konf.GetValue("Cost");
             StockPrice = bool.Parse(Konf.GetValue("StockPrice"));
+
+            if (!IconsLoaded)
+            {
+                return;
+            }
+
             //create appbutton
             if (appLauncherButton == null)
             {
                 Texture2D texture = new(36, 36, TextureFormat.RGBA32, false);
                 //object value = texture.LoadRawTextureData(File.ReadAllBytes(RelPath + "/files/button.png"));
 
-                object value = texture.LoadImage(File.ReadAllBytes(RelPath + "/files/button.png"));
+                // LoadImage --> ImageConversion.LoadImage
+                var icon = GenIcon("button");
+
+                object value = icon; //  texture.LoadImage(File.ReadAllBytes(RelPath + "/files/button.png"));
                 appLauncherButton =  KSP.UI.Screens.ApplicationLauncher.Instance.AddModApplication(
                   () => { ButtonPress = true; },
                   () => { ButtonPress = false;},
@@ -84,6 +97,31 @@ namespace KerbalKlinic
                    texture);
              }
         }
+
+        private Icon GenIcon(string iconName)
+        {
+
+            var normIcon = new Texture2D(32, 32, TextureFormat.RGBA32, false);
+            var normIconFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), iconName + "_off.png"); // icon to be present in same folder as dll
+            WWW www = new WWW(normIconFile);
+            www.LoadImageIntoTexture(normIcon);
+            //normIcon = www.texture;
+            //normIcon.LoadRawTextureData(File.ReadAllBytes(normIconFile));
+            normIcon.Apply();
+
+            var selIcon = new Texture2D(32, 32, TextureFormat.RGBA32, false);
+            var selIconFile = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), iconName + "_on.png");// icon to be present in same folder as dll
+            www = new WWW(selIconFile);
+            www.LoadImageIntoTexture(selIcon);
+            //selIcon = www.texture;
+            //selIcon.LoadRawTextureData(File.ReadAllBytes(selIconFile));
+            selIcon.Apply();
+            www.Dispose();
+
+            var icon = new Icon(iconName + "Icon", normIcon, selIcon);
+            return icon;
+        }
+
 
         /// <summary>OnGUI</summary>
         public void OnGUI()
