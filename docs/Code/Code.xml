@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KerbalKlinic</name>
+    </assembly>
+    <members>
+        <member name="T:KerbalKlinic.KerbalKlinic">
+            <summary>KerbalKlinic (NPKK)</summary>
+        </member>
+        <member name="F:KerbalKlinic.KerbalKlinic.KlinicPriceString">
+            <summary>Klinic Price String</summary>
+        </member>
+        <member name="F:KerbalKlinic.KerbalKlinic.KlinicPrice">
+            <summary>Klinic Price</summary>
+        </member>
+        <member name="M:KerbalKlinic.KerbalKlinic.Awake">
+            <summary>Awake</summary>
+        </member>
+        <member name="M:KerbalKlinic.KerbalKlinic.OnGUI">
+            <summary>OnGUI</summary>
+        </member>
+        <member name="M:KerbalKlinic.KerbalKlinic.MenuGUI(System.Int32)">
+            <summary>MenuGUI</summary>
+        </member>
+        <member name="M:KerbalKlinic.KerbalKlinic.OnDestroy">
+            <summary>OnDestroy</summary>
+        </member>
+        <member name="T:KerbalKlinic.Properties.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:KerbalKlinic.Properties.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:KerbalKlinic.Properties.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+    </members>
+</doc>
