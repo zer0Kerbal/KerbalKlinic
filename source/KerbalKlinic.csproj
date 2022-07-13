@@ -65,6 +65,9 @@
     <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.AnimationModule.dll">
       <Private>False</Private>
     </Reference>
+    <Reference Include="K:\112\KSP_x64_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -117,9 +120,9 @@ IF "%25K112%25"=="" (
 	GOTO DONE
 )
 
-start /D $(ProjectDir)..\..\ /WAIT _deploy.bat  $(TargetDir) $(TargetFileName) $(TargetName)
+start /D $(ProjectDir)..\ /WAIT _deploy.bat  $(TargetDir) $(TargetFileName) $(TargetName)
 if $(ConfigurationName) == Release (	
-  start /D $(ProjectDir)..\..\ /WAIT _buildRelease.bat $(TargetDir) $(TargetFileName) $(TargetName)
+  start /D $(ProjectDir)..\ /WAIT _buildRelease.bat $(TargetDir) $(TargetFileName) $(TargetName)
 
 del $(TargetDir)\*.tmp
 )
