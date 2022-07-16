@@ -1,11 +1,11 @@
-<!-- readme.md v1.6.8.2
-KerbalKlinic (NRKK)
+<!-- readme.md v1.6.9.2
+MOD-NAME (ABBV)
 created: 17 Jul 2017
-updated: 03 Jun 2022 -->
+updated: 05 Jul 2022 -->
 
 <!--this file: CC BY-ND 4.0 by zer0Kerbal-->
 
-[![KerbalKlinic][MOD:shd:latest]][MOD:forum] [![KSP version][KSP:shd]][KSP:url]  [![License][LIC:shd]][LIC:url]  
+[![MOD-NAME][MOD:shd:latest]][MOD:forum] [![KSP version][KSP:shd]][KSP:url]  [![License][LIC:shd]][LIC:url]  
 [![Curseforge][CURSFG:shd]][CURSFG:url] [![GitHub][GITHUB:shd]][GITHUB:url] [![SpaceDock][SPCDCK:shd]][SPCDCK:url] [![CKAN][CKAN:shd]][CKAN:url]   
 [![Pages][MOD:pages:shd]][MOD:pages]
 
@@ -21,7 +21,7 @@ An addon that introduces a method to resurrect dead kerbals for Kerbal Space Pr
 
 <!-- adopted with *express* permission and brought to you by *KerbSimpleCo* -->
 
-<img src="https://raw.githubusercontent.com/zer0Kerbal/KerbalKlinic/master/img/HeroLogo_1920x1920.png" alt="KerbalKlinic Hero" width="72%" height="72%">
+<img src="https://raw.githubusercontent.com/zer0Kerbal/KerbalKlinic/master/img/HeroLogo_1920x1920.png" alt="KerbalKlinic Hero" width="50%" height="50%">
 
 ### Preamble by [NepalRAWR][nepalrawr]
 
@@ -44,6 +44,7 @@ An addon that introduces a method to resurrect dead kerbals for Kerbal Space Pr
 
 ### See More
 
+* For more images, see our [Marketing Slicks][MOD:markt]
 * Discussions and news on this mod: See [Discussions][MOD:discu] or [KSP Forums][MOD:forum]
 * Changelog Summary for more details of changes : See [ChangeLog][MOD:chlog]
 * Known Issues for more details of feature requests and known issues : See [Known Issues][MOD:issue]
@@ -77,17 +78,14 @@ An addon that introduces a method to resurrect dead kerbals for Kerbal Space Pr
     <img src="https://www.overwolf.com/brand-guidelines/img/logo2.svg" alt="CurseForge/OverWolf App" width="15%" height="15%">
 </a>
 
+Whilst I agree CKAN is a great mod for those that can't use zip tools. I take no part, nor am I interested in maintaining the CKAN mod metadata for my mods.
+Please don't ask me about it but refer to the CKAN mod thread if you are having issues with CKAN or the metadata it maintains. Beware, CKAN *can* really mess up though it tries very, very, very hard not to.
+
 or [![CKAN][CKAN:img]][CKAN:url]
 
 ### Dependencies
 
 * [Kerbal Space Program][KSP:url] [![Kerbal Space Program][KSP:shd]][KSP:url] [^2]
-
-### Supports
-
-* Either [^3]
-  * [Module Manager][mm]
-  * [Module Manager /L][mml]
 
 ### Suggests
 
@@ -95,6 +93,12 @@ or [![CKAN][CKAN:img]][CKAN:url]
 * [On Demand Fuel Cells (ODFC)][ODFC]
 * [GPO (Goo Pumps & Oils') Speed Pump (GPO)][GPO]
 * [TweakScale (TWK)][TWK]
+
+### Supports
+
+* Either [^3]
+  * [Module Manager][mm]
+  * [Module Manager /L][mml]
 
 <div style="border:0.5px solid Tomato; background-color: #BADA55; color: #FF0000; text-align:center">
   <p><b>red box below is a link to forum post on how to get support</b></p>
@@ -106,6 +110,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 ### Credits and Special Thanks
 
 * [NepalRAWR][nepalrawr] for creating this glorious parts addon!
+* [Lisias][lisias] for the stock toolbar button code and implementing it!
 * see [Attribution.md][MOD:attr] for more comprehensive list
 
 ### Legal Mumbo Jumbo (License *provenance*)
@@ -141,6 +146,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 [MOD:forum]: https://forum.kerbalspaceprogram.com/index.php?/topic/208543-*/ "KerbalKlinic Forum Thread"
 [MOD:issue]: https://github.com/zer0Kerbal/KerbalKlinic/issues "Issues"
 [MOD:licns]: https://github.com/zer0Kerbal/KerbalKlinic/blob/master/LICENSE "Github License"
+[MOD:markt]: https://zer0kerbal.github.io/MOD-NAME/Marketing "Marketing Slicks"
 [MOD:notic]: https://zer0kerbal.github.io/KerbalKlinic/Notices "GitHub Pages"
 [MOD:pages]: https://zer0kerbal.github.io/KerbalKlinic/ "GitHub Pages"
 
@@ -152,9 +158,9 @@ or [![CKAN][CKAN:img]][CKAN:url]
 [MOD:pages:shd]: https://img.shields.io/badge/GitHub-Pages-white?style=plastic&labelColor=9cf&logoColor=181717&logo=github "GitHub IO"
 
 <!--- mod provenance -->
+[MOD:0:dnload]: https://spacedock.info/mod/1636 "SpaceDock"
 [MOD:0:source]: https://github.com/NepalRAWR/KerbalKlinic "GitHub"
 [MOD:0:thread]: https://forum.kerbalspaceprogram.com/index.php?/topic/169316-*/ "KSP Forum"
-[MOD:0:dnload]: https://spacedock.info/mod/1636 "SpaceDock"
 
 <!--- license provenance -->
 [LIC:0:url]: https://www.gnu.org/licenses/gpl-3.0-standalone.html "GPLv3"  
@@ -229,6 +235,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 [youtube]: https://www.youtube.com/channel/UCp9c8IaK4Gjgfj3O9QxrbDw
 
 [nepalrawr]: https://forum.kerbalspaceprogram.com/index.php?/profile/102159-*/ "NepalRAWR"
+[lisias]: https://forum.kerbalspaceprogram.com/index.php?/profile/187168-*/ "Lisias"
 [zer0Kerbal]: https://forum.kerbalspaceprogram.com/index.php?/profile/190933-*/ "zer0Kerbal"
 
 ---
