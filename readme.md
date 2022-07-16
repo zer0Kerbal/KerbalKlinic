@@ -1,17 +1,17 @@
 <!-- readme.md v1.6.9.2
-MOD-NAME (ABBV)
+Kerbal Klinic (NRKK)
 created: 17 Jul 2017
 updated: 05 Jul 2022 -->
 
 <!--this file: CC BY-ND 4.0 by zer0Kerbal-->
 
-[![MOD-NAME][MOD:shd:latest]][MOD:forum] [![KSP version][KSP:shd]][KSP:url]  [![License][LIC:shd]][LIC:url]  
+[![KerbalKlinic][MOD:shd:latest]][MOD:forum] [![KSP version][KSP:shd]][KSP:url]  [![License][LIC:shd]][LIC:url]  
 [![Curseforge][CURSFG:shd]][CURSFG:url] [![GitHub][GITHUB:shd]][GITHUB:url] [![SpaceDock][SPCDCK:shd]][SPCDCK:url] [![CKAN][CKAN:shd]][CKAN:url]   
 [![Pages][MOD:pages:shd]][MOD:pages]
 
 
 
-# KerbalKlinic (NRKK)
+# Kerbal Klinic (NRKK)
 
 An addon that introduces a method to resurrect dead kerbals for Kerbal Space Program.
 
@@ -146,7 +146,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 [MOD:forum]: https://forum.kerbalspaceprogram.com/index.php?/topic/208543-*/ "KerbalKlinic Forum Thread"
 [MOD:issue]: https://github.com/zer0Kerbal/KerbalKlinic/issues "Issues"
 [MOD:licns]: https://github.com/zer0Kerbal/KerbalKlinic/blob/master/LICENSE "Github License"
-[MOD:markt]: https://zer0kerbal.github.io/MOD-NAME/Marketing "Marketing Slicks"
+[MOD:markt]: https://zer0kerbal.github.io/KerbalKlinic/Marketing "Marketing Slicks"
 [MOD:notic]: https://zer0kerbal.github.io/KerbalKlinic/Notices "GitHub Pages"
 [MOD:pages]: https://zer0kerbal.github.io/KerbalKlinic/ "GitHub Pages"
 
