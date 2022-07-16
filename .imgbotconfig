@@ -10,7 +10,10 @@
         "**/FX/**",
         "**/Icons/**",
         "**/LegalMumboJumbo/**",
+        "**/Parts/**",
         "**/PluginData/**",
+        "**/Props/**",
+        "**/Spaces/**",
         "**/Textures/**",
         "**/UI/**"
     ],
