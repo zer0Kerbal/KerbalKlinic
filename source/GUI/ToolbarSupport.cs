@@ -2,7 +2,7 @@
 	This file is
 		© 2022 LisiasT
 
-	And licensed to Kerbal Klinic under:
+	And licensed to zer0Kerbal under:
 		* GPL 3.0 : https://www.gnu.org/licenses/gpl-3.0.txt
 
 	You should have received a copy of the GNU General Public License 3.0
