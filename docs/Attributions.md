@@ -25,6 +25,7 @@ updated: 03 Jun 2022
 
 <ul>
   <li><a href="https://forum.kerbalspaceprogram.com/index.php?/profile/183210-*/"><img border="0" alt="NepalRAWR" src="https://kerbal-forum-uploads.s3.us-west-2.amazonaws.com/monthly_2017_12/NepalRAWR.thumb.png.aed6306991676bffbc272848e33dd8f9.png" width="50" height="50" > NepalRAWR</a> for creating the <a href="https://forum.kerbalspaceprogram.com/index.php?/topic/208543-*/" alt="KerbalKlinic">KerbalKlinic</a> addon!</li>
+  <li><a href="https://forum.kerbalspaceprogram.com/index.php?/profile/187168-*/"><img border="0" alt="Lisias" src="https://kerbal-forum-uploads.s3.us-west-2.amazonaws.com/monthly_2018_03/_HR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzAyMS81NDcvb3JpZ2luYWwvbGFpa2EuanBn.thumb.png.34e7fcb6640d163b3f2d08e4ae72bbaf.ba2fb8fa0e945f312ac6da46b71659fd" width="50" height="50" > Lisias</a> for supplying and implementing the stock button code!</li>
   <li><i>Thank you to everyone who gave feedback! It's very important for me and highly appreciated.</i></li>
 </ul>
 
@@ -75,10 +76,10 @@ updated: 03 Jun 2022
 </ul>
 
 <!-- links -->
-[DML]: https://forum.kerbalspaceprogram.com/index.php?/topic/208543-*/ "DaMichel Ltd Forum Thread"
+[NRKK]: https://forum.kerbalspaceprogram.com/index.php?/topic/208543-*/ "Kerbal Klinic Forum Thread"
 
-[damichel]: https://forum.kerbalspaceprogram.com/index.php?/profile/93697-*/ "damichel"
-[bezzier]: https://forum.kerbalspaceprogram.com/index.php?/profile/81209-*/ "Bezzier"
+[nepalrawr]: https://forum.kerbalspaceprogram.com/index.php?/profile/102159-*/ "NepalRAWR"
+[lisias]: https://forum.kerbalspaceprogram.com/index.php?/profile/187168-*/ "Lisias"
 [cptkipard]: https://forum.kerbalspaceprogram.com/index.php?/profile/70516-*/ "Captain Kipard"
 [zer0Kerbal]: https://forum.kerbalspaceprogram.com/index.php?/profile/190933-*/ "zer0Kerbal"
 
