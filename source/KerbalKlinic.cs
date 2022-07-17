@@ -24,6 +24,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions; // needed for REGEX
+using KSP.Localization;
 
 namespace KerbalKlinic
 {
@@ -59,10 +60,12 @@ namespace KerbalKlinic
         /// <summary>Awake</summary>
         public void Awake()
         {
+            Debug.Log("KerbalKlinic Awake");
             Instance = this;
             this.ShowMenu = false;
             //Get values from cfg
             MenuWindow = new Rect(Screen.width / 2 + int.Parse(Konf.GetValue("WindowPosX")), Screen.height / 2 + int.Parse(Konf.GetValue("WindowPosY")), 400, 400);
+            Debug.Log($("KerbalKlinic X {1} Y {2}", int.Parse(Konf.GetValue("WindowPosX"), int.Parse(Konf.GetValue("WindowPosY")));
             KlinicPriceString = Konf.GetValue("Cost");
             StockPrice = bool.Parse(Konf.GetValue("StockPrice"));
         }
