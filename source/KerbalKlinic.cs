@@ -35,7 +35,7 @@ namespace KerbalKlinic
 
         // GUI
         internal bool ShowMenu = false;
-        Rect MenuWindow;
+        private Rect MenuWindow;
 		private bool isVisible = true;
         private Vector2 scrollPosition;
         private Rect KlinicWindow = new(200, 200, 100, 100);
@@ -74,7 +74,7 @@ namespace KerbalKlinic
             if (this.ShowMenu) 
             {
                 GUI.skin = HighLogic.Skin;
-                MenuWindow = GUI.Window(0, MenuWindow, MenuGUI, "Kerbal Klinic 1.1");
+                MenuWindow = GUI.Window(0, MenuWindow, MenuGUI, "Kerbal Klinic" + Version.SText);
             }
         }
 
@@ -165,8 +165,11 @@ namespace KerbalKlinic
         }
         void OnDisable()
         {
-            Konf.SetValue("WindowPosX", string.Format("f", MenuWindow.x - (Screen.width / 2)));
-            Konf.SetValue("WindowPosY", string.Format("f", MenuWindow.y - (Screen.height / 2)));
+            Konf.SetValue("WindowPosX", string.Format("{0:f}", MenuWindow.x));
+            Konf.SetValue("WindowPosY", string.Format("{0:f}", MenuWindow.y));
+
+            //Konf.SetValue("WindowPosX", string.Format("{0:f}", MenuWindow.x - (Screen.width / 2)));
+            //Konf.SetValue("WindowPosY", string.Format("{0:f}", MenuWindow.y - (Screen.height / 2)));
 
             Konf.SetValue("StockPrice", StockPrice.ToString());
 
