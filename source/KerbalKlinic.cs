@@ -65,7 +65,7 @@ namespace KerbalKlinic
             this.ShowMenu = false;
             //Get values from cfg
             MenuWindow = new Rect(Screen.width / 2 + int.Parse(Konf.GetValue("WindowPosX")), Screen.height / 2 + int.Parse(Konf.GetValue("WindowPosY")), 400, 400);
-            //Debug.Log($("KerbalKlinic X {1} Y {2}", int.Parse(Konf.GetValue("WindowPosX"), int.Parse(Konf.GetValue("WindowPosY")))));
+            // Debug.Log($("KerbalKlinic X {1} Y {2}", int.Parse(Konf.GetValue("WindowPosX"), int.Parse(Konf.GetValue("WindowPosY")))));
             KlinicPriceString = Konf.GetValue("Cost");
             StockPrice = bool.Parse(Konf.GetValue("StockPrice"));
         }
@@ -77,7 +77,7 @@ namespace KerbalKlinic
             if (this.ShowMenu) 
             {
                 GUI.skin = HighLogic.Skin;
-                MenuWindow = GUI.Window(0, MenuWindow, MenuGUI, "Kerbal Klinic" + Version.SText);
+                MenuWindow = GUI.Window(0, MenuWindow, MenuGUI, Localizer.Format("#NRKK-001"), Version.SText);		// #NRKK-001 = Kerbal Klinic
             }
         }
 
@@ -89,14 +89,14 @@ namespace KerbalKlinic
             IEnumerable<ProtoCrewMember> KerbalAlive = HighLogic.CurrentGame.CrewRoster.Kerbals(ProtoCrewMember.KerbalType.Crew, ProtoCrewMember.RosterStatus.Assigned);
             
             //Toolbar
-           string[] toolbarSTRING = new string[] { "KerbalKlinic", "Options" };
+           string[] toolbarSTRING = new string[] { Localizer.Format("#NRKK-002"), Localizer.Format("#NRKK-003") };		// #NRKK-002 = KerbalKlinic		// #NRKK-003 = Options
            ToolbarINT = GUI.Toolbar(new Rect(20, 30, 360, 30), ToolbarINT, toolbarSTRING);
 
             //Main Window
             if (ToolbarINT == 0)
             {
                 //Label
-                GUI.Label(new Rect(100, 70, 200, 20), "Select Kerbal");
+                GUI.Label(new Rect(100, 70, 200, 20), Localizer.Format("#NRKK-004"));		// #NRKK-004 = Select Kerbal
 
                 //KerbalSelection
                 GUI.BeginGroup(new Rect(50, 100, 300, 230));
@@ -126,7 +126,8 @@ namespace KerbalKlinic
                          { CalculateHireCost(); }
                         else if (StockPrice == false)
                         { KlinicPrice = double.Parse(KlinicPriceString); }
-                        if (GUI.Button(new Rect(20, 340, 360, 60), "Resurrect " + SelectedKerb + " for " + KlinicPrice.ToString() + " funds."))
+                        if (GUI.Button(new Rect(20, 340, 360, 60), Localizer.Format("#NRKK-005"), SelectedKerb + KlinicPrice.ToString()))		// #NRKK-005 = Resurrect {1} for {2} funds.
+                        //if (GUI.Button(new Rect(20, 340, 360, 60), "Resurrect " + SelectedKerb + " for " + KlinicPrice.ToString() + " funds."))
                         {
                             if (Funding.CanAfford(Convert.ToSingle(KlinicPrice)))
                             {
@@ -138,7 +139,7 @@ namespace KerbalKlinic
                     }
                     else
                     {
-                        if (GUI.Button(new Rect(20, 340, 360, 60), "Resurrect " + SelectedKerb))
+                        if (GUI.Button(new Rect(20, 340, 360, 60), Localizer.Format("#NRKK-006", SelectedKerb)))		// #NRKK-006 = Resurrect {1}
                         {SelectedKerb.rosterStatus = ProtoCrewMember.RosterStatus.Available; }
                     }
                 }
@@ -148,20 +149,20 @@ namespace KerbalKlinic
             //Options
             else if(ToolbarINT == 1)
             {
-                GUI.Label(new Rect(20, 70, 360, 20), "Change cost");
+                GUI.Label(new Rect(20, 70, 360, 20), Localizer.Format("#NRKK-007"));		// #NRKK-007 = Change cost
                 KlinicPriceString = GUI.TextField(new Rect(20, 100, 360, 30), KlinicPriceString);
                 KlinicPriceString = Regex.Replace(KlinicPriceString, "[^0-9]", "");
                 if(KlinicPriceString == null)
                 {
                     KlinicPriceString = "0";
                 }
-                if(GUI.Button(new Rect(20, 150, 360, 50), "Save in config"))
+                if(GUI.Button(new Rect(20, 150, 360, 50), Localizer.Format("#NRKK-008")))		// #NRKK-008 = Save in config
                 {
                    
-                    Konf.SetValue("Cost", KlinicPriceString);
+                    Konf.SetValue(Localizer.Format("#NRKK-009"), KlinicPriceString);		// #NRKK-009 = Cost
                     Konf.Save(RelPath+"/files/config.cfg");
                 }
-                StockPrice = GUI.Toggle(new Rect(20, 220, 360, 40), StockPrice, "Use stock price");
+                StockPrice = GUI.Toggle(new Rect(20, 220, 360, 40), StockPrice, Localizer.Format("#NRKK-010"));		// #NRKK-010 = Use stock price
             }
             GUI.DragWindow(new Rect(0, 0, 400, 400));
 
