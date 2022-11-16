@@ -234,7 +234,7 @@ or [![CKAN][CKAN:img]][CKAN:url]
 [twitter]: https://twitter.com/zer0Kerbal
 [youtube]: https://www.youtube.com/@zer0Kerbal
 
-[nepalrawr]: https://forum.kerbalspaceprogram.com/index.php?/profile/102159-*/ "NepalRAWR"
+[nepalrawr]: https://forum.kerbalspaceprogram.com/index.php?/profile/183210-*/ "NepalRAWR"
 [lisias]: https://forum.kerbalspaceprogram.com/index.php?/profile/187168-*/ "Lisias"
 [zer0Kerbal]: https://forum.kerbalspaceprogram.com/index.php?/profile/190933-*/ "zer0Kerbal"
 
