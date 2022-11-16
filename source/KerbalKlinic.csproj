@@ -128,9 +128,9 @@ IF "%25K112%25"=="" (
 	GOTO DONE
 )
 
-start /D $(ProjectDir)..\ /WAIT _deploy.bat  $(TargetDir) $(TargetFileName) $(TargetName)
+start /D $(ProjectDir)..\ /WAIT _addonDeploy.bat --quick  $(TargetDir) $(TargetFileName) $(TargetName)
 if $(ConfigurationName) == Release (	
-  start /D $(ProjectDir)..\ /WAIT _buildRelease.bat $(TargetDir) $(TargetFileName) $(TargetName)
+  start /D $(ProjectDir)..\ /WAIT _addonRelease.bat --quick $(TargetDir) $(TargetFileName) $(TargetName)
 
 del $(TargetDir)\*.tmp
 )
